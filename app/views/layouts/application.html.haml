@@ -1,0 +1,12 @@
+!!!
+%html
+  = render :partial => '/layouts/head'
+  #container.clearfix
+    - flash.each do |name, msg|
+      = content_tag :div, msg, :id => "flash_#{name}"
+    #nav
+      = yield(:nav)
+    #main_content
+      = yield
+
+
