@@ -3,3 +3,5 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass_cache
+.sass_cache/*
+
