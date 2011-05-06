@@ -49,6 +49,12 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    haml (3.1.1)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     has_scope (0.5.0)
     i18n (0.5.0)
     inherited_resources (1.2.2)
@@ -63,6 +69,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
     nifty-generators (0.4.6)
     orm_adapter (0.0.4)
     paperclip (2.3.11)
@@ -105,8 +112,10 @@ PLATFORMS
 DEPENDENCIES
   devise
   formtastic
+  haml-rails (>= 0.2)
   inherited_resources
   jquery-rails
+  mocha
   nifty-generators
   paperclip (~> 2.3)
   rails (= 3.0.7)

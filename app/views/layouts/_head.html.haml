@@ -1,15 +1,17 @@
 %head
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   %title
     = yield(:title) || "Untitled"
   %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-  = stylesheet_link_tag [ "application" ]
+  = stylesheet_link_tag ["screen", "bgstretcher"]
+
   <link rel="shortcut icon" href="/images/favicon.gif" />
   - if Rails.env == "production"
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'
   - else
     = javascript_include_tag 'jquery.min'
 
-  = javascript_include_tag ['rails', 'application'], :cache => 'base'
+  = javascript_include_tag ['rails', 'galleria.js','application'], :cache => 'base'
   = yield(:extra_scripts)
     
   = csrf_meta_tag

@@ -1,6 +1,9 @@
 Heike::Application.routes.draw do
+  resources :categories
+
   devise_for :users
 
+  root :to => "categories#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

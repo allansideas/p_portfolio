@@ -1,0 +1,36 @@
+#categories.clearfix
+  #name
+    Heike De La Rey
+  - @categories.each_with_index do |c, ind|
+    %div{:class => "category clearfix", :id => "category_#{c.id}"}
+      =c.name
+  #contact
+    %p heike@heike.com
+    %p 021 123 456
+#gallery
+  - @categories.first.images.each do |i|
+    %a{:href => i.image.url(:original)}  
+      =image_tag i.image.url(:original), :alt => i.description
+:javascript
+  $(".category").click(function(){
+    $(".category").removeClass("active");
+    $(this).addClass("active");
+    var id = $(this).attr("id").split("_")[1];
+    $.get("/categories/?category_id="+id, function(data){
+      $('#gallery').html(data).galleria({
+    width:$(window).width()-200,
+    height:$(window).height()-50,
+    lightbox: true
+  });
+
+      });
+  });
+  Galleria.loadTheme('/javascripts/themes/classic/galleria.classic.js');
+  $('#gallery').galleria({
+    width:$(window).width()-200,
+    height:$(window).height()-50,
+    lightbox: true
+  });
+  $(window).resize(function(){
+    window.location.reload();
+  });

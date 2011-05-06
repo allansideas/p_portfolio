@@ -1,0 +1,67 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+@import compass/reset
+@import compass/utilities/general/clearfix
+
+body
+  background: #000000
+  color: #fff
+  font-family: 'Oswald', arial, serif
+
+#name
+  height: 50px
+  line-height: 50px
+  font-size: 25px
+  padding-left: 15px
+
+#contact
+  height: 50px
+  position: absolute
+  bottom: 10px
+  width: 120px
+  left: 57px
+  font-size: 14px
+  color: #ccc
+  text-align: right
+#categories
+  text-align: right
+  width: 180px
+  float: left
+  margin-right: 5px
+  font-size: 18px
+  .category
+    background: #333
+    margin-bottom: 5px
+    padding: 3px 3px 3px 15px
+  .category:hover
+    color: #000000
+    background: #fff
+    cursor: pointer
+  .category.active
+    color: #000000
+    background: #fff
+#gallery
+  float: left
+  margin-top: 45px
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
+     
+.clearfix 
+  display: inline-block
+/* start commented backslash hack \*/
+* html .clearfix 
+  height: 1%
+.clearfix 
+  display: block 
+/* close commented backslash hack */
+

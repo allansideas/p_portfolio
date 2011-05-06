@@ -4,9 +4,9 @@
   #container.clearfix
     - flash.each do |name, msg|
       = content_tag :div, msg, :id => "flash_#{name}"
-    #nav
+    #nav.clearfix
       = yield(:nav)
-    #main_content
+    #main_content.clearfix
       = yield
 
 

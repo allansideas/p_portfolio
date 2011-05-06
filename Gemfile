@@ -7,6 +7,7 @@ gem 'rails', '3.0.7'
 
 gem 'sqlite3'
 gem 'devise' # Devise must be required before RailsAdmin
+gem "haml-rails", ">= 0.2"  
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'inherited_resources'
 gem "jquery-rails"
@@ -36,3 +37,4 @@ gem "nifty-generators", :group => :development
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
