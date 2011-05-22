@@ -1,4 +1,4 @@
-set :application, "heike"
+set :application, "p_portfolio"
 set :user, application
 set :repository,  "git@github.com:allansideas/photography.git"
 set :scm, :git
