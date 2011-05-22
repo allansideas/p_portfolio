@@ -1,6 +1,6 @@
-set :application, "p_portfolio"
+set :application, "heike_portfolio"
 set :user, application
-set :repository,  "git@github.com:allansideas/photography.git"
+set :repository,  "git@github.com:allansideas/p_portfolio.git"
 set :scm, :git
 
 set :deploy_via, :remote_cache
