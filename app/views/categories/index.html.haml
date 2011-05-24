@@ -18,20 +18,18 @@
     var id = $(this).attr("id").split("_")[1];
     $.get("/categories/?category_id="+id, function(data){
       Galleria.loadTheme('/javascripts/themes/classic/galleria.classic.js');
-      $('#gallery').html(data).galleria({
-    width:$(window).width()-200,
-    height:$(window).height()-50,
-    lightbox: true
-  });
-
-      });
+      $('#gallery').html(data);
+      load_fallery();
+    });
   });
   Galleria.loadTheme('/javascripts/themes/classic/galleria.classic.js');
-  $('#gallery').galleria({
-    width:$(window).width()-200,
-    height:$(window).height()-50,
-    lightbox: true
-  });
+  var load_gallery = function(){
+    $('#gallery').galleria({
+      width:$(window).width()-200,
+      height:$(window).height()-50,
+      lightbox: true
+    });
+  }
   $(window).resize(function(){
     window.location.reload();
   });
