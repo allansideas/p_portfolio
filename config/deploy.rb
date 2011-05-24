@@ -35,11 +35,11 @@ namespace :deploy do
   
   task :symlink_configs do
     run %( cd #{release_path} &&
-      ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml &&
+      ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml
     )
     if :rails_env == 'staging'
       run %( cd #{release_path} &&
-        ln -nfs #{shared_path}/db/staging.sqlite3 #{release_path}/db/staging.sqlite3 &&
+        ln -nfs #{shared_path}/db/staging.sqlite3 #{release_path}/db/staging.sqlite3
       )
     end
   end 
