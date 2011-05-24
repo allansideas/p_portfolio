@@ -1,12 +1,31 @@
-- title "Category"
+#categories.clearfix
+  #name
+    Heike De La Rey
+  - @categories.each_with_index do |c, ind|
+    %div{:class => "category clearfix", :id => "category_#{c.id}"}
+      =link_to c.name, category_path(c), :class => "#{'active' if c.id == @category.id }"
+  #contact
+    %p heike@heike.com
+    %p 021 123 456
+#gallery
+  - @category.images.each do |i|
+    %a{:href => i.image.url(:original)}  
+      =image_tag i.image.url(:original), :alt => i.description
 
-%p
-  %strong Name:
-  = @category.name
-
-%p
-  = link_to "Edit", edit_category_path(@category)
-  |
-  = link_to "Destroy", @category, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", categories_path
+:javascript
+  $(document).ready(function(){
+    $('#gallery').css(
+      {"width": $(window).width()-200,
+      "height": $(window).height()-50}
+    );
+    $("#categories .active").closest(".category").addClass("active");
+    Galleria.loadTheme('/javascripts/themes/classic/galleria.classic.js');
+    $('#gallery').galleria({
+      width: $(window).width()-200,
+      height: $(window).height()-50,
+      lightbox: true
+    });
+    $(window).resize(function(){
+      window.location.reload();
+    });
+  });

@@ -98,30 +98,39 @@ body {
   font-size: 18px;
 }
 /* line 36, ../../src/screen.sass */
+#categories a, #categories a:active, #categories a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* line 39, ../../src/screen.sass */
+#categories a.active, #categories a:hover {
+  color: black;
+}
+/* line 41, ../../src/screen.sass */
 #categories .category {
   background: #333333;
   margin-bottom: 5px;
   padding: 3px 3px 3px 15px;
 }
-/* line 40, ../../src/screen.sass */
+/* line 45, ../../src/screen.sass */
 #categories .category:hover {
   color: black;
   background: white;
   cursor: pointer;
 }
-/* line 44, ../../src/screen.sass */
+/* line 49, ../../src/screen.sass */
 #categories .category.active {
   color: black;
   background: white;
 }
 
-/* line 47, ../../src/screen.sass */
+/* line 52, ../../src/screen.sass */
 #gallery {
   float: left;
   margin-top: 45px;
 }
 
-/* line 51, ../../src/screen.sass */
+/* line 56, ../../src/screen.sass */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -131,18 +140,18 @@ body {
   height: 0;
 }
 
-/* line 59, ../../src/screen.sass */
+/* line 64, ../../src/screen.sass */
 .clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \ */
-/* line 62, ../../src/screen.sass */
+/* line 67, ../../src/screen.sass */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 64, ../../src/screen.sass */
+/* line 69, ../../src/screen.sass */
 .clearfix {
   display: block;
 }
