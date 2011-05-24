@@ -89,8 +89,8 @@ GEM
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
+    pg (0.11.0)
     polyglot (0.3.1)
-    postgres (0.7.9.2008.01.28)
     rack (1.2.2)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -134,7 +134,7 @@ DEPENDENCIES
   mocha
   nifty-generators
   paperclip (~> 2.3)
-  postgres
+  pg
   rails (= 3.0.7)
   rails_admin!
   sqlite3

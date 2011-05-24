@@ -15,7 +15,7 @@ gem "paperclip", "~> 2.3"
 gem "formtastic"
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "nifty-generators", :group => :development
-gem 'postgres'
+gem 'pg'
 # Use unicorn as the web server
 # gem 'unicorn'
 
