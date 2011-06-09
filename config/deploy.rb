@@ -13,6 +13,9 @@ task :production do
   set :deploy_to, "/home/#{application}/production"
   set :branch, "master"
   set :rails_env, 'production'
+  role :app, "74.207.249.233"
+  role :web, "74.207.249.233"
+  role :db,  "74.207.249.233", :primary => true
 end
 
 task :staging do
